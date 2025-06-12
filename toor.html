@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>فرم رزرو تور - طراحی جدید</title>
+    <link rel="stylesheet" href="formstyle.css" />
+</head>
+
+<body>
+    <form action="toor.php" method="POST" autocomplete="off">
+        <h1>فرم رزرو تور</h1>
+
+        <div class="form-row">
+            <!-- ستون اول -->
+            <div class="form-col">
+                <label for="name">نام و نام خانوادگی:</label>
+                <input type="text" id="name" name="name" required />
+                
+                <label for="email">ایمیل:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="maghsad">کشور مقصد:</label>
+                <select class="slc" id="maghsad" name="maghsad" required>
+                    <option value="Dubai">دبی</option>
+                    <option value="Turkey">ترکیه</option>
+                    <option value="China">چین</option>
+                    <option value="Malaysia">مالزی</option>
+                </select>
+
+                <label for="eghamat">تعداد شب‌های اقامت:</label>
+                <input type="number" id="eghamat" name="eghamat" min="1" required />
+
+                <label for="bozorgsal">تعداد بزرگسال:</label>
+                <input type="number" id="bozorgsal" name="bozorgsal" min="1" required />
+
+                <label for="kodak">تعداد کودک:</label>
+                <input type="number" id="kodak" name="kodak" min="0" required />
+            </div>
+
+            <!-- ستون دوم -->
+            <div class="form-col">
+                <label>نوع اقامت:</label>
+                <div class="radio-group">
+                    <input type="radio" id="3setare" name="hotelstar" value="3setare" checked />
+                    <label for="3setare" class="radio-card">هتل ۳ ستاره</label>
+
+                    <input type="radio" id="4setare" name="hotelstar" value="4setare" />
+                    <label for="4setare" class="radio-card">هتل ۴ ستاره</label>
+
+                    <input type="radio" id="5setare" name="hotelstar" value="5setare" />
+                    <label for="5setare" class="radio-card">هتل ۵ ستاره</label>
+                </div>
+
+                <label>خدمات اضافی:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="khadamat1" name="khadamat[]" value="1" />
+                    <label for="khadamat1" class="checkbox-card">گشت شهری (300,000 تومان)</label>
+
+                    <input type="checkbox" id="khadamat2" name="khadamat[]" value="2" />
+                    <label for="khadamat2" class="checkbox-card">ترنسفر فرودگاهی (200,000 تومان)</label>
+
+                    <input type="checkbox" id="khadamat3" name="khadamat[]" value="3" />
+                    <label for="khadamat3" class="checkbox-card">بیمه مسافرتی (150,000 تومان)</label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit">محاسبه قیمت و رزرو</button>
+    </form>
+</body>
+
+</html>
