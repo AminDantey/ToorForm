@@ -29,7 +29,7 @@
 
 ## 📂 ساختار پروژه
 
-TourForm/
+ToorForm/
 ├── toor.php # پردازش فرم و محاسبه قیمت
 ├── toor.html # فرم رزرو تور
 ├── formstyle.css # استایل فرم رزرو
